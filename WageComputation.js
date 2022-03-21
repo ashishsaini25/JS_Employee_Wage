@@ -32,3 +32,21 @@ else{
     }
     console.log("The net income of the employee is :"+net_income);
 }
+{
+    const full_time=1;
+    const half_time=2;
+    const full_time_hour=8;
+    const half_time_hour=4;
+    const wage_per_hour=20;
+    function getWorkinghour(check){
+        if(check==full_time)return full_time_hour;
+        else if(check==half_time)return half_time_hour;
+        else 
+        return 0;
+    }
+    let net_income=0;
+    let check=Math.floor(Math.random()*10)%3;
+    net_income=wage_per_hour*getWorkinghour(check);
+    console.log("The net income of the employee is :"+net_income);
+}
+
