@@ -32,6 +32,7 @@
     }
     }
 
+
     let full_time_working_day= new Array();
     let half_time_working_day= new Array();
     let absent_on_the_Day =new Array();
@@ -43,15 +44,20 @@
 
     });
     console.log("Full day ");
-    full_time_working_day.forEach(DailyWage);
+ console.log(full_time_working_day)
 
     console.log("half day ");
      console.log(half_time_working_day);
     
 
     console.log(" absent ");
-   absent_on_the_Day.forEach(DailyWage);
-
-    
+   console.log(absent_on_the_Day);
+ 
+   
+   function Findtotal(total_data,daily_data){
+       return total_data+daily_data;
+   }
+   let total_working_hour=Array.from(empdailyhrsmap.values()).reduce(Findtotal,0);
+   let total_working_income=dailywagerecode.filter(dailyearning=>dailyearning>0).reduce(Findtotal,0);
+   console.log("the total working hour: "+total_working_hour+" and the total earning is :"+total_working_income);
 }
-
